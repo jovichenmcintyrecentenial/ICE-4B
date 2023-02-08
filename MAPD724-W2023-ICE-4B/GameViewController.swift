@@ -4,46 +4,58 @@
 //
 //  Created by Jovi on 08/02/2023.
 //
+//
+//  GameViewController.swift
+//  MAPD724-W2023-ICE-3B
+//
+//  Created by Jovi on 01/02/2023.
+//
 
 import UIKit
 import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var liveLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
             
-            // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
                 
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
                 sceneNode.scaleMode = .aspectFill
                 
-                // Present the scene
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
-                    
                     view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
                 }
             }
         }
+        
+        //init
+        CollisionManager.gameViewController = self;
+        ScoreManager.score = 0
+        ScoreManager.lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
     }
+    
+    func updateLivesLabel(){
+        liveLabel.text = "Live: \(ScoreManager.lives)"
+    }
+    
+    func updateScoreLabel(){
+        scoreLabel.text = "Score: \(ScoreManager.score)"
 
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
+            return .portrait
         } else {
             return .all
         }
