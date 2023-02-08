@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MAPD724_W2023_ICE_4B" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-6r-jM2">
-                                <rect key="frame" x="20" y="47" width="86" height="24"/>
+                                <rect key="frame" x="20" y="59" width="86" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-lB-IIj">
-                                <rect key="frame" x="279" y="47" width="131" height="24"/>
+                                <rect key="frame" x="279" y="59" width="131" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="baseline" secondItem="HOX-lB-IIj" secondAttribute="baseline" id="4TE-n9-8oZ"/>
-                            <constraint firstItem="HOX-lB-IIj" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" constant="20" id="7ni-3h-ULf"/>
+                            <constraint firstItem="HOX-lB-IIj" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" constant="-20" id="7ni-3h-ULf"/>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="Awi-py-Fvc"/>
                             <constraint firstItem="HOX-lB-IIj" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="HFA-1F-cnD"/>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="TeY-dv-Xj2"/>
