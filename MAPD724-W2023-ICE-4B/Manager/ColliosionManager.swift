@@ -45,6 +45,12 @@ class CollisionManager{
                     scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
                     ScoreManager.score += 100
                     gameViewController?.updateScoreLabel()
+                    if(ScoreManager.score % 2000 == 0){
+                        ScoreManager.lives += 1
+                        gameViewController?.updateLivesLabel()
+
+                    }
+
                     break
                 case "cloud":
                     scene.run(SKAction.playSoundFileNamed("thunder", waitForCompletion: false))
@@ -53,7 +59,7 @@ class CollisionManager{
                         ScoreManager.lives -= 1
                         gameViewController?.updateLivesLabel()
                         
-                        if(ScoreManager.lives == 0){
+                        if(ScoreManager.lives <= 0){
                             gameViewController?.presentEndScene()
                         }
                     }
