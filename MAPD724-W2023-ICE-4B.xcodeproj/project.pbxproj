@@ -78,6 +78,8 @@
 		986864ED299467B5000AA0FA /* dock51.woff in Resources */ = {isa = PBXBuildFile; fileRef = 986864B6299467B5000AA0FA /* dock51.woff */; };
 		986864EE299467B5000AA0FA /* dock51.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 986864B7299467B5000AA0FA /* dock51.woff2 */; };
 		986864EF299467B5000AA0FA /* Dock51.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 986864B8299467B5000AA0FA /* Dock51.ttf */; };
+		986864F229946FD6000AA0FA /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 986864F129946FD6000AA0FA /* StartScene.sks */; };
+		986864F429947006000AA0FA /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986864F329947006000AA0FA /* StartScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +155,8 @@
 		986864B6299467B5000AA0FA /* dock51.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = dock51.woff; sourceTree = "<group>"; };
 		986864B7299467B5000AA0FA /* dock51.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dock51.woff2; sourceTree = "<group>"; };
 		986864B8299467B5000AA0FA /* Dock51.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dock51.ttf; sourceTree = "<group>"; };
+		986864F129946FD6000AA0FA /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		986864F329947006000AA0FA /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +189,11 @@
 		9868645029946786000AA0FA /* MAPD724-W2023-ICE-4B */ = {
 			isa = PBXGroup;
 			children = (
+				986864F029946F18000AA0FA /* Scenes */,
+				9868647D299467B5000AA0FA /* Assets */,
+				98686476299467B1000AA0FA /* Core */,
+				9868646D299467AB000AA0FA /* GameObjects */,
 				9868645129946786000AA0FA /* AppDelegate.swift */,
-				9868645329946786000AA0FA /* GameScene.sks */,
-				9868645729946786000AA0FA /* GameScene.swift */,
 				9868645929946786000AA0FA /* GameViewController.swift */,
 				9868645B29946786000AA0FA /* Main.storyboard */,
 				9868645E29946787000AA0FA /* Assets.xcassets */,
@@ -200,9 +206,6 @@
 		98686468299467A1000AA0FA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				9868647D299467B5000AA0FA /* Assets */,
-				98686476299467B1000AA0FA /* Core */,
-				9868646D299467AB000AA0FA /* GameObjects */,
 				98686469299467A1000AA0FA /* ScoreManager.swift */,
 				9868646A299467A1000AA0FA /* ColliosionManager.swift */,
 			);
@@ -324,6 +327,17 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		986864F029946F18000AA0FA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				986864F129946FD6000AA0FA /* StartScene.sks */,
+				9868645329946786000AA0FA /* GameScene.sks */,
+				9868645729946786000AA0FA /* GameScene.swift */,
+				986864F329947006000AA0FA /* StartScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +429,7 @@
 				986864EA299467B5000AA0FA /* textureAtlas.png in Resources */,
 				986864DB299467B5000AA0FA /* enemy2.png in Resources */,
 				986864CB299467B5000AA0FA /* coin05.png in Resources */,
+				986864F229946FD6000AA0FA /* StartScene.sks in Resources */,
 				986864EF299467B5000AA0FA /* Dock51.ttf in Resources */,
 				986864B9299467B5000AA0FA /* bullet.png in Resources */,
 				986864C1299467B5000AA0FA /* clickMeButton.png in Resources */,
@@ -459,6 +474,7 @@
 				9868647A299467B1000AA0FA /* GameObject.swift in Sources */,
 				98686474299467AC000AA0FA /* Ocean.swift in Sources */,
 				98686473299467AC000AA0FA /* Cloud.swift in Sources */,
+				986864F429947006000AA0FA /* StartScene.swift in Sources */,
 				9868645229946786000AA0FA /* AppDelegate.swift in Sources */,
 				9868647B299467B1000AA0FA /* GameObjectProtocol.swift in Sources */,
 				98686475299467AC000AA0FA /* Player.swift in Sources */,
