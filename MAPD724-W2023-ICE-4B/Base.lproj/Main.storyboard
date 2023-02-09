@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dock51.ttf">
+            <string>Dock51</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -17,36 +22,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-6r-jM2">
-                                <rect key="frame" x="20" y="59" width="86" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="19.999999999999993" y="59.000000000000007" width="95.333333333333314" height="25.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-lB-IIj">
-                                <rect key="frame" x="279" y="59" width="131" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-lB-IIj">
+                                <rect key="frame" x="262" y="59.000000000000007" width="148" height="25.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWu-92-yb9">
+                                <rect key="frame" x="25" y="231" width="380" height="167"/>
+                                <string key="text">Play
+Mail Polit</string>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="80"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-XL-mbb">
+                                <rect key="frame" x="140" y="433" width="150" height="66"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonPressEvent:" destination="BV1-FR-VrT" eventType="touchUpInside" id="0ul-JV-9E3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="baseline" secondItem="HOX-lB-IIj" secondAttribute="baseline" id="4TE-n9-8oZ"/>
                             <constraint firstItem="HOX-lB-IIj" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" constant="-20" id="7ni-3h-ULf"/>
+                            <constraint firstItem="EU5-XL-mbb" firstAttribute="top" secondItem="JWu-92-yb9" secondAttribute="bottom" constant="35" id="AcV-Dn-yfg"/>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="Awi-py-Fvc"/>
+                            <constraint firstItem="EU5-XL-mbb" firstAttribute="centerX" secondItem="JWu-92-yb9" secondAttribute="centerX" id="EMr-Jg-fCQ"/>
                             <constraint firstItem="HOX-lB-IIj" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="HFA-1F-cnD"/>
+                            <constraint firstItem="EU5-XL-mbb" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="Hs9-fz-67t"/>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="TeY-dv-Xj2"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="EU5-XL-mbb" secondAttribute="bottom" constant="399" id="dgj-Gz-c2G"/>
+                            <constraint firstItem="HOX-lB-IIj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Xmk-6r-jM2" secondAttribute="trailing" constant="146.66666666666669" id="fvg-p5-5ki"/>
+                            <constraint firstItem="EU5-XL-mbb" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="lWq-Oc-VMT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="liveLabel" destination="Xmk-6r-jM2" id="fe6-o5-9cg"/>
                         <outlet property="scoreLabel" destination="HOX-lB-IIj" id="QjR-0G-RMw"/>
+                        <outlet property="startButton" destination="EU5-XL-mbb" id="n9b-kv-7Ff"/>
+                        <outlet property="startLabel" destination="JWu-92-yb9" id="VLI-4h-Kuf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="-2"/>
+            <point key="canvasLocation" x="16.744186046511629" y="-2.5751072961373391"/>
         </scene>
     </scenes>
     <resources>

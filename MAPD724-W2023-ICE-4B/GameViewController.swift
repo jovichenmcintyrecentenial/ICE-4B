@@ -17,31 +17,39 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
+    var currentScene:GKScene?
+    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var liveLabel: UILabel!
+    
+    @IBOutlet weak var startLabel: UILabel!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = GKScene(fileNamed: "GameScene") {
-            
-            if let sceneNode = scene.rootNode as! GameScene? {
-                
-                sceneNode.scaleMode = .aspectFill
-                
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    view.ignoresSiblingOrder = true
-                }
-            }
-        }
+        presentStartScene()
         
+//        if let scene = GKScene(fileNamed: "GameScene") {
+//
+//            if let sceneNode = scene.rootNode as! GameScene? {
+//
+//                sceneNode.scaleMode = .aspectFill
+//
+//                if let view = self.view as! SKView? {
+//                    view.presentScene(sceneNode)
+//                    view.ignoresSiblingOrder = true
+//                }
+//            }
+//        }
+        presentStartScene()
         //init
         CollisionManager.gameViewController = self;
-        ScoreManager.score = 0
-        ScoreManager.lives = 5
-        updateLivesLabel()
-        updateScoreLabel()
+
+
+
     }
     
     func updateLivesLabel(){
@@ -63,5 +71,55 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func setScene(sceneName:String) {
+        
+        currentScene = GKScene(fileNamed: sceneName)
+        
+        if let scene = currentScene!.rootNode as! SKScene? {
+            
+            scene.scaleMode = .aspectFill
+            
+            if let view = self.view as! SKView? {
+                view.presentScene(scene)
+                view.ignoresSiblingOrder = true
+            }
+        }
+        
+    }
+    
+    func presentStartScene(){
+        scoreLabel.isHidden = true
+        liveLabel.isHidden = true
+        
+        startLabel.isHidden = false
+        startButton.isHidden = false
+        
+        setScene(sceneName: "StartScene")
+    }
+    
+    func presentEndScene(){
+        
+    }
+    
+    func presentGameScene(){
+        scoreLabel.isHidden = false
+        liveLabel.isHidden = false
+        
+        startLabel.isHidden = true
+        startButton.isHidden = true
+        
+        setScene(sceneName: "GameScene")
+        
+        
+        ScoreManager.score = 0
+        ScoreManager.lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+    }
+    
+    @IBAction func startButtonPressEvent(_ sender: Any) {
+        presentGameScene()
     }
 }
