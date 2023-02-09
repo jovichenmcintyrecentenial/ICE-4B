@@ -52,7 +52,12 @@ class CollisionManager{
                     if(ScoreManager.lives > 0) {
                         ScoreManager.lives -= 1
                         gameViewController?.updateLivesLabel()
+                        
+                        if(ScoreManager.lives == 0){
+                            gameViewController?.presentEndScene()
+                        }
                     }
+                    
 
                     break
                 default:

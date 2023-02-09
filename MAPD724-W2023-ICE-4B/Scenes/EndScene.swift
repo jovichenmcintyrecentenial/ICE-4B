@@ -13,7 +13,7 @@ import UIKit
 
 
 
-class StartScene: SKScene {
+class EndScene: SKScene {
     
     var ocean1:Ocean?
     var ocean2:Ocean?
@@ -24,7 +24,7 @@ class StartScene: SKScene {
         screenWidth = frame.width
         screenHeight = frame.height
 
-        name = "START"
+        name = "END"
     
 
         //add ocean

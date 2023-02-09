@@ -22,28 +22,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var liveLabel: UILabel!
     
+    @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var endButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presentStartScene()
-        
-//        if let scene = GKScene(fileNamed: "GameScene") {
-//
-//            if let sceneNode = scene.rootNode as! GameScene? {
-//
-//                sceneNode.scaleMode = .aspectFill
-//
-//                if let view = self.view as! SKView? {
-//                    view.presentScene(sceneNode)
-//                    view.ignoresSiblingOrder = true
-//                }
-//            }
-//        }
         presentStartScene()
         //init
         CollisionManager.gameViewController = self;
@@ -93,6 +81,9 @@ class GameViewController: UIViewController {
         scoreLabel.isHidden = true
         liveLabel.isHidden = true
         
+        endLabel.isHidden = true
+        endButton.isHidden = true
+        
         startLabel.isHidden = false
         startButton.isHidden = false
         
@@ -100,10 +91,24 @@ class GameViewController: UIViewController {
     }
     
     func presentEndScene(){
+        scoreLabel.isHidden = true
+        liveLabel.isHidden = true
+        
+        endLabel.isHidden = false
+        endButton.isHidden = false
+        
+        
+        startLabel.isHidden = true
+        startButton.isHidden = true
+        
+        setScene(sceneName: "EndScene")
         
     }
     
     func presentGameScene(){
+        endLabel.isHidden = true
+        endButton.isHidden = true
+        
         scoreLabel.isHidden = false
         liveLabel.isHidden = false
         
@@ -120,6 +125,11 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func startButtonPressEvent(_ sender: Any) {
+        presentGameScene()
+    }
+    
+    
+    @IBAction func endButtonPressEvent(_ sender: Any) {
         presentGameScene()
     }
 }

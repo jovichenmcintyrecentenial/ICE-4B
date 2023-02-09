@@ -52,6 +52,26 @@ Mail Polit</string>
                                     <action selector="startButtonPressEvent:" destination="BV1-FR-VrT" eventType="touchUpInside" id="0ul-JV-9E3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhb-C1-zrc">
+                                <rect key="frame" x="25" y="225" width="380" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="XRA-n9-Qza"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="64"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOl-xv-UYl">
+                                <rect key="frame" x="104" y="433" width="217" height="66"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="endButtonPressEvent:" destination="BV1-FR-VrT" eventType="touchUpInside" id="owD-P5-G0m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,13 +83,21 @@ Mail Polit</string>
                             <constraint firstItem="EU5-XL-mbb" firstAttribute="centerX" secondItem="JWu-92-yb9" secondAttribute="centerX" id="EMr-Jg-fCQ"/>
                             <constraint firstItem="HOX-lB-IIj" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="HFA-1F-cnD"/>
                             <constraint firstItem="EU5-XL-mbb" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="Hs9-fz-67t"/>
+                            <constraint firstItem="EU5-XL-mbb" firstAttribute="top" secondItem="Hhb-C1-zrc" secondAttribute="bottom" constant="41" id="I08-9M-d8G"/>
+                            <constraint firstItem="Hhb-C1-zrc" firstAttribute="leading" secondItem="JWu-92-yb9" secondAttribute="leading" id="Kgt-9h-bIc"/>
+                            <constraint firstItem="Hhb-C1-zrc" firstAttribute="trailing" secondItem="JWu-92-yb9" secondAttribute="trailing" id="RRa-Da-xgJ"/>
                             <constraint firstItem="Xmk-6r-jM2" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="TeY-dv-Xj2"/>
+                            <constraint firstItem="pOl-xv-UYl" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="104" id="U1f-KF-ddZ"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="EU5-XL-mbb" secondAttribute="bottom" constant="399" id="dgj-Gz-c2G"/>
+                            <constraint firstItem="pOl-xv-UYl" firstAttribute="baseline" secondItem="EU5-XL-mbb" secondAttribute="baseline" id="eO9-qa-Ju4"/>
                             <constraint firstItem="HOX-lB-IIj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Xmk-6r-jM2" secondAttribute="trailing" constant="146.66666666666669" id="fvg-p5-5ki"/>
                             <constraint firstItem="EU5-XL-mbb" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="lWq-Oc-VMT"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="pOl-xv-UYl" secondAttribute="trailing" constant="109" id="yfT-A9-hjg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="endButton" destination="pOl-xv-UYl" id="j4Z-Js-kFP"/>
+                        <outlet property="endLabel" destination="Hhb-C1-zrc" id="NDY-tq-KeS"/>
                         <outlet property="liveLabel" destination="Xmk-6r-jM2" id="fe6-o5-9cg"/>
                         <outlet property="scoreLabel" destination="HOX-lB-IIj" id="QjR-0G-RMw"/>
                         <outlet property="startButton" destination="EU5-XL-mbb" id="n9b-kv-7Ff"/>
