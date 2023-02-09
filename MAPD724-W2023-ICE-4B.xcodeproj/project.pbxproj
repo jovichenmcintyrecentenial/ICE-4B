@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9822147C299478D700FFFAA4 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9822147A299478D700FFFAA4 /* EndScene.sks */; };
+		9822147D299478D700FFFAA4 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822147B299478D700FFFAA4 /* EndScene.swift */; };
 		9868645229946786000AA0FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9868645129946786000AA0FA /* AppDelegate.swift */; };
 		9868645429946786000AA0FA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9868645329946786000AA0FA /* GameScene.sks */; };
 		9868645829946786000AA0FA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9868645729946786000AA0FA /* GameScene.swift */; };
@@ -84,6 +86,8 @@
 
 /* Begin PBXFileReference section */
 		982214792994759300FFFAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9822147A299478D700FFFAA4 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		9822147B299478D700FFFAA4 /* EndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 		9868644E29946786000AA0FA /* MAPD724-W2023-ICE-4B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2023-ICE-4B.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9868645129946786000AA0FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9868645329946786000AA0FA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 		986864F029946F18000AA0FA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9822147A299478D700FFFAA4 /* EndScene.sks */,
+				9822147B299478D700FFFAA4 /* EndScene.swift */,
 				986864F129946FD6000AA0FA /* StartScene.sks */,
 				9868645329946786000AA0FA /* GameScene.sks */,
 				9868645729946786000AA0FA /* GameScene.swift */,
@@ -453,6 +459,7 @@
 				986864DA299467B5000AA0FA /* enemy3.png in Resources */,
 				986864E8299467B5000AA0FA /* thunder.mp3 in Resources */,
 				986864EE299467B5000AA0FA /* dock51.woff2 in Resources */,
+				9822147C299478D700FFFAA4 /* EndScene.sks in Resources */,
 				986864E5299467B5000AA0FA /* coin.wav in Resources */,
 				986864DD299467B5000AA0FA /* explosion3.png in Resources */,
 				986864BB299467B5000AA0FA /* plane2.png in Resources */,
@@ -476,6 +483,7 @@
 				9868647A299467B1000AA0FA /* GameObject.swift in Sources */,
 				98686474299467AC000AA0FA /* Ocean.swift in Sources */,
 				98686473299467AC000AA0FA /* Cloud.swift in Sources */,
+				9822147D299478D700FFFAA4 /* EndScene.swift in Sources */,
 				986864F429947006000AA0FA /* StartScene.swift in Sources */,
 				9868645229946786000AA0FA /* AppDelegate.swift in Sources */,
 				9868647B299467B1000AA0FA /* GameObjectProtocol.swift in Sources */,
